@@ -1283,6 +1283,8 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 }
 
 @media only screen and (max-width: 480px) {
+
+
     /*-- Courses --*/
     #courses-wrapper [class*='col-xs'] {
         width: 100%;
@@ -1954,5 +1956,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     .testim .cont div p {
         line-height: 25px;
     }
+
+
 
 }
