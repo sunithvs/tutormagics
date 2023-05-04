@@ -102,9 +102,11 @@
             <div class="col-md-6">
                 <div class="contact-form">
                     <h4>Send A Message</h4>
-                    <form>
+                    <form method="post"
+                          action="https://script.google.com/macros/s/AKfycbw1DxTU4axTv4fUnfWs2OQx4aqkm2jpKZdhkJWJMBJiDrETZG1PpmP5w28FtQy-rzQoyA/exec">
                         <input class="input" type="text" name="name" placeholder="Name">
                         <input class="input" type="email" name="email" placeholder="Email">
+                        <input class="input" type="tel" name="phone_number" placeholder="Parent's number">
                         <input class="input" type="text" name="subject" placeholder="Subject">
                         <textarea class="input" name="message" placeholder="Enter your Message"></textarea>
                         <button class="main-button icon-button pull-right">Send Message</button>
@@ -175,19 +177,6 @@
         <!-- row -->
         <div id="bottom-footer" class="row">
 
-            <!-- social -->
-            <!--                <div class="col-md-4 col-md-push-8">-->
-            <!--                    <ul class="footer-social">-->
-            <!--                        <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>-->
-            <!--                        <li><a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a></li>-->
-            <!--                        <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>-->
-            <!--                        <li><a href="#" class="youtube"><i class="fa fa-youtube"></i></a></li>-->
-            <!--                        <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>-->
-            <!--                    </ul>-->
-            <!--                </div>-->
-            <!--                &lt;!&ndash; /social &ndash;&gt;-->
-
-            <!-- copyright -->
             <div class="text-center">
                 <div class="footer-copyright">
                     <span>&copy; Copyright 2018. All Rights Reserved.</span>
@@ -218,6 +207,24 @@
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 <script type="text/javascript" src="js/google-map.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+<script>
+    $("#submit-form").submit((e) => {
+        e.preventDefault()
+        $.ajax({
+            url: "",
+            data: $("#submit-form").serialize(),
+            method: "post",
+            success: function (response) {
+                alert("Form submitted successfully")
+                window.location.reload()
+                //window.location.href="https://google.com"
+            },
+            error: function (err) {
+                alert("Something Error")
 
+            }
+        })
+    })
+</script>
 </body>
 </html>
