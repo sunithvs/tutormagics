@@ -591,7 +591,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     right: 0;
     bottom: 0;
     top: 0;
-    background-color: #FF6700;
+    /*background-color: #FF6700;*/
     opacity: 0;
     -webkit-transition: 0.2s opacity;
     transition: 0.2s opacity;
